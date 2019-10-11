@@ -1,0 +1,258 @@
+.padrao{
+    text-align: center;    
+    background-color: #327E8C;
+    height: 100%;
+}
+
+.padraoCad{
+    text-align: center;
+    background-color: white;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.textCad{
+    font-size: 16pt;
+    color: grey;
+}
+
+.inicio{
+    padding-top: 30%;
+
+}
+
+.padraoMain{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #327E8C;
+    display: flex;
+    flex-direction: column;
+}
+
+.notificacoesPg{
+    background-color: rgb(233, 233, 233);
+    height: 100%;
+}
+
+#buttonPadrao{
+    background-color: #5CD6D2;
+    color: white;
+}
+
+#menudots{
+    background-color: #95DFEA;
+    text-align: right;
+}
+
+.dropstyle{
+    background-color: #1FC7DC;
+    
+}
+.link{
+    color: white;
+}
+.navCor{
+    background-color: #4BBBD1;
+} 
+
+.cards{
+    border-radius: 10px;
+    background-color: white;
+    padding: 12px;
+}
+
+.pdBt{
+    padding: 13px;
+}
+
+.mgBt{
+    margin-left: 13px;
+}
+
+.topoInicio{
+    background-color:#95DFEA;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+}
+
+.itemInicio{
+    display: flex;
+    flex: 0 0 25%;
+    object-position: absolute;
+    flex-direction: bottom;
+    align-items: center;
+}
+
+.imgPainel{
+    flex: 0 0 20px;
+    width: 70%;
+    height: 70%;
+}
+
+.imgLogo{
+    width: 100%;
+}
+
+figcaption{
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 0.25em;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+.botaoModal{
+    width: 100px;
+    height: 100px;
+    padding: 1px;
+}
+
+.fundomodal{
+    background: #5FCDDE;
+    border-radius: 5px;
+    
+}
+
+.divBg{
+    background: white;
+    width: 25%;
+    height: 25%;
+}
+
+.btDentro{
+    width: 15%;
+    height: 15%;
+    padding: 10px;
+}
+
+.ads{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-top-width: 0px;
+
+}
+
+.p{
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.meio{
+    margin-right: 0px;
+    margin-left: 16%;
+}
+
+.esquerda{
+    margin-left: 19%;
+}
+
+.mesmo-tamanho {
+    width: 90px;
+    white-space: normal;
+}
+
+.primeiro{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.borda{
+    border-radius: 10px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 5px 1px -0.1px  	#2C7D8C;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  } 
+
+
+body {
+    width:100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+html {
+    height: 100%;
+}
+
+.navbarTextLeft{
+    text-align: left;
+    flex-grow: 1;
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+.icon{
+    padding: 0;
+    margin-top: 0;
+}
+
+.etapa{
+    font-size: 14pt;
+    color: grey;
+    margin-top: -10px;
+}
+
+.imgEtapa{
+    margin-top: -20px;
+}
+  
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #4BBBD1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+   
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.hidden {
+    display: none;
+}
