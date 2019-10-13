@@ -6,47 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase.js"></script>
+
+  
 </head>
   <body class="padraoCad">
-    <div>
+     
       <img src="icons/iconCad.png" style="width: 120px;">
       <p class="textCad">Cadastre-se</p>
-    </div>
+    
     <div class="container">
-        <form>
+        
             <div class="form-group">
-                <input type="text" class="form-control bg-light" placeholder="Nome Completo">
+                <input type="text" class="form-control bg-light" id="nomeUsuario" placeholder="Nome Completo">
               </div>
               <div class="form-group">
-                <input type="email" class="form-control bg-light" placeholder="Email">
+                <input type="email" class="form-control bg-light" id="emailUsuario" placeholder="Email">
               </div>
               <div class="form-group">
-                <input type="password" class="form-control bg-light" placeholder="Senha">
+                <input type="password" class="form-control bg-light" id="senhaUsuario" placeholder="Senha">
               </div>
               <div class="form-group">
-                <input type="password" class="form-control bg-light" placeholder="Repetir Senha">
+                <input type="password" class="form-control bg-light" id="senhaUsuarioRepetir" placeholder="Repetir Senha">
               </div>
               <div class="form-group">
-                <input type="number" class="form-control bg-light" placeholder="N° SUS">
+                <input type="number" class="form-control bg-light" id="numSusUsuario" placeholder="N° SUS">
               </div>
               <div class="form-group">
-                <input type="number" class="form-control bg-light" placeholder="CEP">
+                <input type="number" class="form-control bg-light" id="cepUsuario" placeholder="CEP">
               </div>
               <div class="form-group">
-                <input type="number" class="form-control bg-light" placeholder="Número">
+                <input type="number" class="form-control bg-light" id="numeroUsuario" placeholder="Número">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control bg-light" placeholder="Endereço">
+                <input type="text" class="form-control bg-light" id="enderecoUsuario" placeholder="Endereço">
               </div>
               <div>
-                <a href="#" class="btn btn-info btn-block navCor"><strong>Cadastrar</strong></button></a> </br>
+                <button id="btCadastrar" class="btn btn-info btn-block navCor"><strong>Cadastrar</strong></button> </br>
               </div>
-            </form>
-          </form>
+           
+         
     </div>
+    <script src="script.js"></script>
   </body>
+  
 </html>
