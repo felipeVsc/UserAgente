@@ -25,11 +25,57 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore();
 
+// login user
 
+var btLogar = document.getElementById("btLogar");
+btLogar.addEventListener("click", function(){
+  document.getElementById("emailLogin") == "";
+  
+  var emailLogin = document.getElementById("emailLogin").value;
+  var senhaLogin = document.getElementById("senhaLogin").value;
+  var docRefLogin = firestore.collection("users").doc(emailLogin);
+  console.log("testado");
+  docRefLogin.get().then(function(doc) {
+      if (doc && doc.exists){
+        const myData = doc.data();
+        if (myData.senhaUsuario == senhaLogin){
+          console.log(myData.emailUsuario);
+          doc.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+        });
+
+        // mudar pagina
+
+        document.getElementById("btPageEnviarNot").addEventListener("click", function(){
+          // nova pag
+
+          document.getElementById("btMsgUsrNtf").addEventListener("click", function(){
+            var docRef = firestore.collection("notificacoes").doc(emailUsuario); 
+            docRef.set({
+              emailUsuario: document.getElementById("emailUsuario").value,
+              msgUsrNtf: document.getElementById("msgUsrNtf").value
+            })
+
+        })
+      
+          })
+          
+        else{
+          console.log("senha errada");
+        }
+      }
+    }).catch(function (error){
+      console.log("error");
+    })
+  });
 
 
 // VARIAVEIS CADASTRO //
-if (document.getElementById("cadastroUsuario").class.indexOf("hidden")!=-1){
+
+document.getElementById("linkCadastrar").addEventListener("click", function(){
+  // mudar de pagina e etc
+  
   var btCadastrar = document.getElementById("btCadastrar");
 
   btCadastrar.addEventListener("click", function(){
@@ -55,33 +101,11 @@ if (document.getElementById("cadastroUsuario").class.indexOf("hidden")!=-1){
       alert("senha errada");
     }
   });
-}
-else{
-// login user
-console.log("teste");
-var btLogar = document.getElementById("btLogar");
-btLogar.addEventListener("click", function(){
-  document.getElementById("emailLogin") == "";
-  
-  var emailLogin = document.getElementById("emailLogin").value;
-  var senhaLogin = document.getElementById("senhaLogin").value;
-  var docRefLogin = firestore.collection("users").doc(emailLogin);
-  console.log("testado");
-  docRefLogin.get().then(function(doc) {
-      if (doc && doc.exists){
-        const myData = doc.data();
-        if (myData.senhaUsuario == senhaLogin){
-          console.log(myData.emailUsuario);
-        }
-        else{
-          console.log("senha errada");
-        }
-      }
-    }).catch(function (error){
-      console.log("error");
-    })
-  });
-}
+})
+ 
+
+
+
 
 
 
