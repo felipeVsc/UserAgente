@@ -1,4 +1,3 @@
-
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 };
@@ -74,7 +73,8 @@ btLogar.addEventListener("click", function(){
 // VARIAVEIS CADASTRO //
 
 document.getElementById("linkCadastrar").addEventListener("click", function(){
-  // mudar de pagina e etc
+  document.getElementById("login").classList.add('hidden');
+  document.getElementById("cadastro").classList.remove('hidden');
   
   var btCadastrar = document.getElementById("btCadastrar");
 

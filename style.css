@@ -35,7 +35,7 @@
     height: 100%;
 }
 
-#buttonPadrao{
+.buttonPadrao{
     background-color: #5CD6D2;
     color: white;
 }
@@ -50,7 +50,7 @@
     
 }
 .link{
-    color: white;
+    color: white !important;
 }
 .navCor{
     background-color: #4BBBD1;

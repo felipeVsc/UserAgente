@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Agente</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase.js"></script>        
+    </head>
+    <body>
+        <script>
+            function nextPage(idActualDiv, idNextDiv) {
+                document.getElementById(idActualDiv).classList.add('hidden')
+                document.getElementById(idNextDiv).classList.remove('hidden')
+            };    
+        </script>
+        <div id="login" class="padrao">
+            <div>
+                <img src="icons/logo.png" width="100%" height="50%">
+            </div>
+                
+            <div class="container">                        
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text icon"><img src="icons/iconUser.png" style="width: 36px;"></span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Email" id="emailLogin" name="email">
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text icon"><img src="icons/iconPass.png" style="width: 36px;"></span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Senha" id="senhaLogin" name="senha">
+                </div>
+
+                <button class="btn btn-block buttonPadrao" id="btLogar" onclick="nextPage('login','inicio')"><strong>Entrar</strong></button></br>
+            
+                <div class="row">    
+                    <a  style="padding-left: 10%; display: inline-block;" onclick="nextPage('login','recSenha')" class="link">Esqueci a senha</a>            
+                    <a  id="linkCadastrar" style="padding-left: 25%; display: inline-block;" class="link">Cadastre-se</a> 
+                </div>
+            </div>
+        </div>
+
+        <div id="cadastro" class="padraoCad hidden">
+            <img src="icons/iconCad.png" style="width: 120px;">
+            <p class="textCad">Cadastre-se</p>            
+            <div class="container">                
+                <div class="form-group">
+                    <input type="text" class="form-control bg-light" id="nomeUsuario" placeholder="Nome Completo">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control bg-light" id="emailUsuario" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control bg-light" id="senhaUsuario" placeholder="Senha">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control bg-light" id="senhaUsuarioRepetir" placeholder="Repetir Senha">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control bg-light" id="numSusUsuario" placeholder="N° SUS">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control bg-light" id="cepUsuario" placeholder="CEP">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control bg-light" id="numeroUsuario" placeholder="Número">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control bg-light" id="enderecoUsuario" placeholder="Endereço">
+                </div>
+                <div>
+                    <button id="btCadastrar" class="btn btn-info btn-block navCor"><strong>Cadastrar</strong></button> </br>
+                </div>      
+            </div>
+        </div>
+
+        <div id="recSenha" class="padrao hidden">
+            <img src="icons/logo.png" class="imgLogo">
+            <div class="container">
+                <h5 class="link">Recuperar senha</h5>
+                <form action="/action_page.php">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text icon"><img src="icons/iconUser.png" style="width: 36px;"></span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Email" id="usr" name="email">
+                </div>
+                <button type="submit" class="btn btn-block buttonPadrao"><strong>Recuperar</strong></button> </br>
+                </form>
+                <a class="link" onclick="nextPage('recSenha','login')">Voltar ao login</a>
+            </div>
+        </div>
+
+        <div id="inicio" class="padrao hidden">
+            <div class="inicio topoInicio">
+                <img src="icons/logo.png" width="100%" height="100%">
+            </div>
+            <div>
+                <p class="itemInicio">Se há algum problema na sua rua ou em seu bairro, nos informe</p>
+            </div>
+            <div>
+                <br><br><br><br>
+                <button id="btPageEnviarNot" type="button" class="btn botaoModal" data-toggle="modal" onclick="nextPage('inicio','alerta')" style="margin-top: 90%;float: center;margin-bottom: center; background-color: #4BBBD1;" data-target="#modalExemplo">
+                    <img src="icons/iconMegaBranco.png" width="100%" height="100%">
+                </button>
+            </div>
+        </div>
+
+        <div id="alerta" class="hidden">
+            <nav class="navbar navbar-expand-md navCor navbar-dark link">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="">Início</a>
+                    <a href="">idk</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon" style="cursor:pointer" onclick="openNav()"></span>
+                </button>
+                <a class="navbar-brand navbarTextLeft" onclick="nextPage('alerta','inicio')">Nova Notificação</a>
+            </nav>    
+            </br>
+            <div class="container">
+                <div class="form-group">
+                    <textarea class="form-control" id="msgUsrNtf" rows="3" placeholder="Digite sua mensagem aqui"></textarea>
+                </div>
+                <button class="btn btn-block buttonPadrao" id="btMsgUsrNtf"><strong>Notificar</strong></button>                
+            </div>           
+        </div>
+
+        <script src="script.js"></script>        
+    </body>
+</html>
