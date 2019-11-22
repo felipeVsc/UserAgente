@@ -30,6 +30,21 @@
     flex-direction: column;
 }
 
+.logoInicio{
+    margin-top: -10%;
+}
+
+.itemInicio{
+    display: flex;
+    flex: 0 0 25%;
+    object-position: absolute;
+    align-items: center;
+    color: white;
+}
+
+.opcao{
+    color: white;
+}
 .notificacoesPg{
     background-color: rgb(233, 233, 233);
     height: 100%;
